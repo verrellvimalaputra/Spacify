@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bold_toolbar">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="bottom_navigation_indicator" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="indicatorColor">@color/primaryColor</item>
+    </style>
+</resources>

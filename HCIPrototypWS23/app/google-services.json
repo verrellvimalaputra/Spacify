@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1031760087788",
+    "project_id": "hciprototypws23",
+    "storage_bucket": "hciprototypws23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031760087788:android:f7907b5b8b0bfbfb4cf3c9",
+        "android_client_info": {
+          "package_name": "com.example.hci_prototyp_ws23"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFM6NgoMzI8AbVPBpRB6F6YSF1kOKK_ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

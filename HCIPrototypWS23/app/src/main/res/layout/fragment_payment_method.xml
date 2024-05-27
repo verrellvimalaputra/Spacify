@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Fragments.PaymentMethod">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/paymentMethod_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_do_you_want_to_pay"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/payment_paypal_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="15dp"
+            android:text="@string/paypal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:background="@drawable/rounded_slight_gray"/>
+
+        <RadioButton
+            android:id="@+id/payment_debit_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="15dp"
+            android:text="@string/debit_credit_card"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:background="@drawable/rounded_slight_gray" />
+
+        <RadioButton
+            android:id="@+id/payment_giropay_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="15dp"
+            android:text="@string/giropay"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:background="@drawable/rounded_slight_gray" />
+
+        <RadioButton
+            android:id="@+id/payment_sepa_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="15dp"
+            android:text="@string/sepa_lastscrifft"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:background="@drawable/rounded_slight_gray" />
+
+        <RadioButton
+            android:id="@+id/payment_cash_rb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:padding="15dp"
+            android:text="@string/cash_on_arrival"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:clickable="false"
+            android:background="@drawable/rounded_slight_gray" />
+
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/paymentMethod_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_button_background"
+        android:text="@string/book_now"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

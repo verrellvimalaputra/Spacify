@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logIn">
+
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.hci_prototyp_ws23.Fragments.LogIn"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_logIn_to_homepage"
+            app:destination="@id/homepage"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/logIn"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_logIn_to_register"
+            app:destination="@id/register"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.example.hci_prototyp_ws23.Fragments.Homepage"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage">
+        <action
+            android:id="@+id/action_homepage_to_search"
+            app:destination="@id/search"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_homepage_to_search2"
+            app:destination="@id/search" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultList"
+        android:name="com.example.hci_prototyp_ws23.Fragments.SearchResultList"
+        android:label="fragment_search_result_list"
+        tools:layout="@layout/fragment_search_result_list" >
+        <action
+            android:id="@+id/action_searchResultList_to_hotelDescription"
+            app:destination="@id/hotelDescription"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="destinationArg"
+            app:argType="string" />
+        <argument
+            android:name="numberOfRoomsArg"
+            app:argType="integer" />
+        <argument
+            android:name="adultsNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="childrenNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+        <argument
+            android:name="checkInDate"
+            app:argType="string" />
+        <argument
+            android:name="checkOutDate"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelDescription"
+        android:name="com.example.hci_prototyp_ws23.Fragments.HotelDescription"
+        android:label="fragment_hotel_description"
+        tools:layout="@layout/fragment_hotel_description" >
+        <action
+            android:id="@+id/action_hotelDescription_to_userInfoOverview"
+            app:destination="@id/userInfoOverview"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+        <argument android:name="hotelArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.Hotel" />
+        <argument
+            android:name="adultsNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="childrenNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="checkInDate"
+            app:argType="string" />
+        <argument
+            android:name="checkOutDate"
+            app:argType="string" />
+        <argument
+            android:name="numberOfRoomsArg"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingConfimation"
+        android:name="com.example.hci_prototyp_ws23.Fragments.BookingConfirmation"
+        android:label="fragment_booking_confimation"
+        tools:layout="@layout/fragment_booking_confimation" >
+        <action
+            android:id="@+id/action_bookingConfimation_to_homepage"
+            app:destination="@id/homepage"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out"
+            app:popUpTo="@id/homepage"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="emailArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.hci_prototyp_ws23.Fragments.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_logIn"
+            app:destination="@id/logIn"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out"
+            app:popUpTo="@id/logIn"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedList"
+        android:name="com.example.hci_prototyp_ws23.Fragments.SavedList"
+        android:label="fragment_saved_list"
+        tools:layout="@layout/fragment_saved_list">
+        <action
+            android:id="@+id/action_savedList_to_hotelDescription"
+            app:destination="@id/hotelDescription"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.hci_prototyp_ws23.Fragments.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_to_searchResultList"
+            app:destination="@id/searchResultList"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.example.hci_prototyp_ws23.Fragments.UserProfile"
+        android:label="UserProfile"
+        tools:layout="@layout/fragment_user_profile"/>
+    <fragment
+        android:id="@+id/userBookings"
+        android:name="com.example.hci_prototyp_ws23.Fragments.UserBookings"
+        android:label="fragment_your_bookings"
+        tools:layout="@layout/fragment_your_bookings" />
+    <fragment
+        android:id="@+id/userInfoOverview"
+        android:name="com.example.hci_prototyp_ws23.Fragments.UserInfoOverview"
+        android:label="fragment_user_info_overview"
+        tools:layout="@layout/fragment_user_info_overview" >
+        <action
+            android:id="@+id/action_userInfoOverview_to_bookingOverview"
+            app:destination="@id/bookingOverview"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+        <argument
+            android:name="hotelArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.Hotel" />
+        <argument
+            android:name="checkInDateArg"
+            app:argType="string" />
+        <argument
+            android:name="checkOutDateArg"
+            app:argType="string" />
+        <argument android:name="adultsNumberArg"
+            app:argType="integer" />
+        <argument android:name="childrenNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="numberOfRoomsArg"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingOverview"
+        android:name="com.example.hci_prototyp_ws23.Fragments.BookingOverview"
+        android:label="fragment_booking_overview"
+        tools:layout="@layout/fragment_booking_overview" >
+        <action
+            android:id="@+id/action_bookingOverview_to_paymentMethod"
+            app:destination="@id/paymentMethod"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+        <argument
+            android:name="hotelArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.Hotel" />
+        <argument
+            android:name="checkInDateArg"
+            app:argType="string" />
+        <argument
+            android:name="checkOutDateArg"
+            app:argType="string" />
+        <argument
+            android:name="adultsNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="childrenNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="numberOfRoomsArg"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethod"
+        android:name="com.example.hci_prototyp_ws23.Fragments.PaymentMethod"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" >
+        <action
+            android:id="@+id/action_paymentMethod_to_bookingConfimation"
+            app:destination="@id/bookingConfimation"
+            app:popUpTo="@id/bookingConfimation"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="userArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.User" />
+        <argument android:name="hotelArg"
+            app:argType="com.example.hci_prototyp_ws23.Models.Hotel" />
+        <argument android:name="checkInDateArg"
+            app:argType="string" />
+        <argument android:name="checkOutDateArg"
+            app:argType="string" />
+        <argument
+            android:name="adultsNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="childrenNumberArg"
+            app:argType="integer" />
+        <argument
+            android:name="totalPriceArg"
+            app:argType="float" />
+        <argument
+            android:name="numberOfRoomsArg"
+            app:argType="integer" />
+
+    </fragment>
+</navigation>
